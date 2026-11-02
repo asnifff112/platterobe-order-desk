@@ -1,9 +1,13 @@
 import { updateSession } from '@/lib/supabase/middleware';
 import type { NextRequest } from 'next/server';
 
-export async function middleware(request: NextRequest) {
+export async function proxy(request: NextRequest) {
   return await updateSession(request);
 }
+
+// Export middleware and default as aliases for maximum compatibility
+export const middleware = proxy;
+export default proxy;
 
 export const config = {
   matcher: [

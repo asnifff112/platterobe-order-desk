@@ -118,8 +118,8 @@ cp .env.example .env.local
 Fill in your credentials:
 ```env
 NEXT_PUBLIC_SUPABASE_URL=https://your-project.supabase.co
-NEXT_PUBLIC_SUPABASE_ANON_KEY=your-anon-key
-SUPABASE_SERVICE_ROLE_KEY=your-service-role-key
+NEXT_PUBLIC_SUPABASE_PUBLISHABLE_KEY=your-publishable-key
+# SUPABASE_SECRET_KEY=your-secret-key (optional server-only)
 APP_URL=http://localhost:3000
 
 # Optional WhatsApp Business Cloud API
@@ -168,8 +168,7 @@ npm run build
 2. In Vercel, click **New Project** and import the repository.
 3. Configure the environment variables:
    - `NEXT_PUBLIC_SUPABASE_URL`
-   - `NEXT_PUBLIC_SUPABASE_ANON_KEY`
-   - `SUPABASE_SERVICE_ROLE_KEY`
+   - `NEXT_PUBLIC_SUPABASE_PUBLISHABLE_KEY`
    - `APP_URL` (set to your Vercel production URL, e.g. `https://platterobe.vercel.app`)
    - `WHATSAPP_ACCESS_TOKEN` (optional)
    - `WHATSAPP_PHONE_NUMBER_ID` (optional)
